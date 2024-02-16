@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.SamadAmir.com</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #0a0a0a;
+            margin-left: 2rem;
+        }
+
+        p {
+            color: #0a0a0a;
+            margin-left: 2rem;
+            width: 70%;
+        }
+
+        form {
+            margin-left: 2rem;
+        }
+
+        label {
+            margin-left: 0.5rem;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 90%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .row {
+            display: flex;
+            margin-bottom: 1rem;
+        }
+
+        .col {
+            flex: 1;
+            margin-right: 1rem;
+        }
+
+        button {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 30px;
+            background-color: rgb(20, 53, 137);
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: aqua;
+        }
+
+        .info-container {
+            background-color: rgb(20, 53, 137);
+            width: 30%;
+            padding: 20px;
+            margin-left: -2%;
+            padding-bottom: 30px;
+        }
+
+        .info-container h5 {
+            color: #fff;
+            padding-top: 2rem;
+            padding-left: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .info-container p {
+            color: #fff;
+            padding-top: 0.5rem;
+            margin: 0;
+        }
+        .details
+        {
+            margin-left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="background-color: aqua; padding-bottom: 50px">
+        <br />
+        <h1>Connect With Us</h1>
+        <p>
+            We would love to respond to your queries.<br>Feel free to get in touch with us.
+        </p>
+        <div style="display: flex">
+            <div style="
+              background-color: white;
+              width: 65%;
+              margin-left: 2%;
+              padding-bottom: 20px;
+            ">
+                <h6 style="color: rgb(2, 4, 79); padding-top: 2rem; padding-left: 2rem">
+                    Send your request
+                </h6>
+                <br />
+                <form action="">
+                    <div class="row">
+                        <div class="col">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" placeholder="Name" />
+                        </div>
+                        <div class="col">
+                            <label for="phone">Phone</label>
+                            <input type="text" id="phone" placeholder="090078601" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="xyz@gmail.com" />
+                        </div>
+                        <div class="col">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" placeholder="Product Demo" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="message">Message</label>
+                            <textarea id="message" rows="3" placeholder="your message"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <button type="button">Send</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="info-container">
+                <h2 style="color: white;">Reach Us</h2>
+                <div style="display: flex">
+                    <div>
+                        <p>Email: </p>
+                        <p>Phone: </p>
+                        <p>Address: </p>
+                    </div>
+                    <div class="details">
+                        <p>samadaamir145@gmail.com</p>
+                        <p>+090078601</p>
+                        <p>random text area</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
