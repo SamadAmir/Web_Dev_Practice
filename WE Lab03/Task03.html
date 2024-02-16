@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.SamadAmir.com</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            background-color: rgb(10, 120, 238);
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .form-wrapper {
+            display: flex;
+        }
+
+        .form {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px;
+            text-align: center;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group input {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .aqua-button {
+            background-color: rgb(10, 120, 238);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 80%;
+        }
+
+        .aqua-button:hover {
+            background-color: rgb(10, 120, 238);
+        }
+
+        .social-buttons {
+            margin-bottom: 20px;
+        }
+
+        .social-buttons button {
+            background-color: rgb(10, 120, 238);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            margin-right: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .social-buttons button:hover {
+            background-color: rgb(10, 120, 238);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            background-color: transparent;
+            border-color: rgb(10, 120, 238);
+            border-radius: 4px;
+            padding: 10px 20px;
+            border-radius: 4px;
+            margin-right: 10px;
+            cursor: pointer;
+            color: black;
+            margin: 0px;
+            padding-right: 20%;
+
+        }
+
+        .btn:hover {
+            background-color: rgb(10, 120, 238);
+            color: white;
+            opacity: 0.7;
+
+        }
+
+        .fa {
+            padding: 1%;
+            padding-left: 50px;
+            padding-right: 50px;
+            font-size: 30px;
+            width: 30px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-left: 40px;
+        }
+
+        .fa:hover {
+            opacity: 0.7;
+        }
+        .fa-facebook {
+            background: #3B5998;
+            color: white;
+        }
+        .fa-google{
+            background:rgb(244, 168, 25);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-wrapper">
+            <form id="signin-form" class="form sign-in">
+                <div class="sign-in" style="padding: bottom 20px;margin-top: 20px;">
+                    <button type="submit" class="btn">Sign In</button>
+                    <button type="submit" class="btn" style="background-color: rgb(10, 120, 238);color: white;">Sign Up</button>
+                </div>
+                <div class="social-buttons" style="padding-top: 20px;margin-right: 50px;">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-google"></a>
+                    
+                </div>
+                <div class="input-group">
+                    <input type="email" id="signin-email" placeholder="Email" required>
+                    <input type="password" id="signin-password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="aqua-button">Sign In</button>
+            </form>
+            <form id="signup-form" class="form sign-up">
+                <div class="input-group">
+                    <div class="sign-in" style="padding-bottom: 20px;padding-top: 20px;">
+                        <button type="submit" class="btn"style="background-color: rgb(10, 120, 238);color: white;">Sign In</button>
+                        <button type="submit" class="btn">Sign Up</button>
+                    </div>
+                    <input type="text" id="signup-username" placeholder="Username" required>
+                    <input type="email" id="signup-email" placeholder="Email" required>
+                    <input type="password" id="signup-password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="aqua-button">Sign Up</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
