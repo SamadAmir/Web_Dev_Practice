@@ -1,0 +1,444 @@
+<!Doctype HTML>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>k21-3873 Q3</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+        
+
+         <div class="panel-heading">
+
+
+   <Button ID="generatepfd"  Class="btn btn-primary pull-right " Style="margin-right:1.5%"  Text="Generate PDF" OnClick="generatepfd_Click" >Generate PDF</Button>
+
+            <h1 class="text-primary" id="dailymeet" Style="text-align:center">  IBL Logistics  Order Form </h1>
+
+        </div>
+
+        <div class="panel-body">
+
+                
+                 
+                   
+
+                 <div class="col-xs-3">
+
+             <label for="name" class="control-label center-block label label-primary" id="" style="border:2px solid green;"> Customer Code  </label>
+            <div class="form-group">
+              
+                <Label ID="customercode"  Text="" class="form-control"></Label>
+            </div>
+        </div>
+
+                      <div class="col-xs-3">
+
+             <label for="name" class="control-label center-block label label-primary" id="" style="border:2px solid green;"> Customer Name </label>
+            <div class="form-group">
+              
+             <Label ID="customername"  Text="" class="form-control"></Label>
+            </div>
+        </div>
+                 <div class="col-xs-3">
+
+             <label for="name" class="control-label center-block label label-primary" id="" style="border:2px solid green;"> City </label>
+            <div class="form-group">
+              
+                 <Label ID="city"  Text="" class="form-control"></Label>
+            </div>
+        </div>
+
+
+          
+
+            <div class="col-xs-3">
+
+             <label for="name" class="control-label center-block label label-primary" id="" style="border:2px solid green;"> Order ID </label>
+            <div class="form-group">
+              
+                 <Label ID="orderid"  Text="" class="form-control"></Label>
+            </div>
+        </div>
+
+
+                 <div class="col-xs-3">
+
+             <label for="name" class="control-label center-block label label-primary" id="" style="border:2px solid green;">Order Date  </label>
+            <div class="form-group">
+              
+                <Label ID="orderdate"  Text="" class="form-control"></Label>
+            </div>
+        </div>
+
+                      <div class="col-xs-3">
+
+             <label for="name" class="control-label center-block label label-primary" id="" style="border:2px solid green;">Customer  Contact Person </label>
+            <div class="form-group">
+              
+                 <Label ID="contactperson"  Text="" class="form-control"></Label>
+            </div>
+        </div>
+                 <div class="col-xs-3">
+
+             <label for="name" class="control-label center-block label label-primary" id="" style="border:2px solid green;">Customer Contact Info </label>
+            <div class="form-group">
+              
+                 <Label ID="contactno"  Text="" class="form-control"></Label>
+            </div>
+        </div>
+             <div class="col-xs-3">
+
+             <label for="name" class="control-label center-block label label-primary" id="" style="border:2px solid green;">Stock Reciver Name /Contact </label>
+            <div class="form-group">
+              
+                <label  ID="recivername"  class="form-control"></label>
+            </div>
+        </div>
+                 <div class="col-xs-3">
+
+             <label for="name" class="control-label center-block label label-primary" id="" style="border:2px solid green;"> Searle Customer Code</label>
+            <div class="form-group">
+              
+              <label  ID="recivercontact"  class="form-control"></label>
+            </div>
+        </div>
+
+
+             <div class="col-xs-3" >
+    <label for="pwd" class="control-label center-block label label-primary" style="border:2px solid green;"> Delivery Mode </label>
+      <label ID="deliverymode"  class="form-control"    >
+          
+      </label>
+  </div>
+   <div class="col-xs-3" >
+    <label for="pwd" class="control-label center-block label label-primary" style="border:2px solid green;" >Payment Mode </label>
+       <label ID="payment"  class="form-control"      >
+           
+       </label>
+  </div>
+            <div class="col-xs-3" >
+    <label for="pwd" class="control-label center-block label label-primary" style="border:2px solid green;" >Category</label>
+ <label ID="Category"  class="form-control">
+           
+       </label>
+  </div>
+
+  <div class="col-xs-3" style="    margin-left: -24.9%;    margin-top: 1%;">
+
+    <label for="name" class="control-label center-block label label-primary" id="" style="border:2px solid green;"> Bill Through</label>
+   <div class="form-group">
+     
+     <label  ID="searlcode"  class="form-control"></label>
+   </div>
+</div>
+
+        <div class="col-xs-3"  style="    margin-top: 15px;">
+
+    <label for="name" class="control-label center-block label label-primary" id="" style="border:2px solid green;"> Salesman</label>
+   <div class="form-group">
+     
+      <Label ID="username"  class="form-control">        
+</Label>
+   </div>
+</div>
+
+     <div class="col-xs-3"  style="    margin-top: 15px;">
+
+    <label for="name" class="control-label center-block label label-primary" id="" style="border:2px solid green;"> Sample Order ID</label>
+   <div class="form-group">
+     
+      <Label ID="Sample_id"  class="form-control">        
+</Label>
+   </div>
+</div>
+              <div class="row">
+                <div class="col-xs-12">
+           
+       
+                
+        </div>
+                       
+
+        </div>
+            
+                </div>
+              
+
+           
+        </div>
+          <div class="panel-body">
+            <div class="col-sm-12">
+      <div class="input-group">
+        <span class="input-group-addon btn-primary" Style="color:#fff;">Delivery Address</span>
+        
+           <Label ID="address"  Text="" class="form-control" aria-describedby="inputGroupSuccess2Status" ></Label>
+      </div>
+
+           
+                    </div></div>
+
+        <div class="panel-body">
+                  
+                 
+  
+         
+            <div class="panel-body">
+
+    
+                 
+
+                      <table class="productTable table table-bordered" style="float:left;width:100%;font-size:90%;">
+        <thead style="background:#337ab7 ;Font-Bold:true; ForeColor:White" >
+            <tr>
+                <th>No.</th>
+                <th>Product ID</th>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>PID001</td>
+                <td>Product 1</td>
+                <td>$10.00</td>
+                <td>5</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>PID002</td>
+                <td>Product 2</td>
+                <td>$15.00</td>
+                <td>3</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>PID003</td>
+                <td>Product 3</td>
+                <td>$20.00</td>
+                <td>4</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>PID004</td>
+                <td>Product 4</td>
+                <td>$25.00</td>
+                <td>2</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>PID005</td>
+                <td>Product 5</td>
+                <td>$30.00</td>
+                <td>6</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+
+                   
+
+                
+
+            </div >
+            <div class="panel-body">
+                <table class="table table-bordered striped" border="1" style="width: 59.8%; ">
+
+                        <tr>
+
+                            <td id="test1"> Invoice Amount </td>
+                            <td> <label  ID="sum"   class="form-control"></label>  </td>
+                    
+                        </tr>
+                        <tr>
+
+                            <td> GST % </td>
+                            <td> <label  ID="gst"  class="form-control"></label></td>
+                           
+                        </tr>
+                          <tr>
+
+                            <td> Incl. Sales Tax</td>
+                            <td> <label  ID="total"  class="form-control"></label> </td>
+                           
+                        </tr>
+             
+
+                    <tr>
+                        <td > GSH</td>
+                            <td> <label  ID="gsh"  class="form-control"></label></td>
+     
+
+                   </tr>
+                     <tr>
+                        <td > Delivery Charges</td>
+                            <td> <label  ID="dcharges"  class="form-control"></label></td>
+           
+
+                   </tr>
+                   <tr>
+
+                   <tr>
+                        <td > Total Order Price</td>
+                            <td> <label  ID="tprice"  class="form-control"></label></td>
+
+
+                   </tr>
+
+
+                    </table>
+
+
+            </div>
+               
+              
+                   
+               
+<div class="panel-body">
+    
+                     <table class="table table-bordered" style="width: 35%;">
+                         
+                           <tr> 
+                              <td class="bg-primary" style="width: 25%;"> Invoice Date  </td>
+                            <td>   <label ID="ddate"    class="form-control"   ></label> </td>
+                        </tr>
+
+                         
+                          
+                       <tr> 
+
+                            <td class="bg-primary" style="width: 50%;"> IBL Invoice #</td>
+                            <td> <label  ID="spl"  class="form-control"></label> </td>
+                           
+                        </tr>
+                            <tr> 
+
+                            <td class="bg-primary" style="width: 50%;"> Delivery Note </td>
+                     <td> <label  ID="DN"  class="form-control"></label> </td>
+                           
+                        </tr>
+                        <tr> 
+
+                            <td class="bg-primary" style="width: 25%;"> Tracking No  </td>
+                            <td> <label  ID="trackingno"  class="form-control"></label> </td>
+                           </tr>  
+                         <tr> 
+                              <td class="bg-primary" style="width: 25%;"> Delivered By  </td>
+                            <td>   <label ID="boy"    class="form-control"   ></label> </td>
+                        </tr>
+                        
+                       
+                    </table>
+
+
+</div>
+          
+
+
+                     
+                   <div class="panel-body">
+                               <Button ID="Submit"  Visible="false" Text="Submit" value="Submit" class=" btn btn-primary pull-right" OnClick="Button1_Click">Submit</Button>
+            </div>
+</Content>
+<script>
+    window.onload = function() {
+    // Define an object to hold label IDs and their corresponding values
+    var labelValues = {
+        "customercode": "k21-3873",
+        "customername": "Samad Amir",
+        "city": "Karachi",
+        "orderid": "WE001",
+        "orderdate": "19-02-2024",
+        "contactperson": "Umer Khan",
+        "contactno": "090078601",
+        "recivername": "Sandesh",
+        "recivercontact": "1234567",
+        "deliverymode": "Metro",
+        "payment": "Card",
+        "Category": "Electronics",
+        "searlcode": "S001",
+        "username": "samadamir121",
+        "Sample_id": "SM001",
+        "address": "National HighWay Karachi"
+    };
+
+    // Loop through labelValues object and update corresponding label elements
+    for (var labelId in labelValues) {
+        if (labelValues.hasOwnProperty(labelId)) {
+            var labelElement = document.getElementById(labelId);
+            if (labelElement) {
+                labelElement.innerText = labelValues[labelId];
+            }
+        }
+    }
+};
+var prices = [10.00, 15.00, 20.00, 25.00, 30.00]; // Prices of products
+        var quantities = [5, 3, 4, 2, 6]; // Quantities of products
+
+        var sum = 0;
+        for (var i = 0; i < prices.length; i++) {
+            sum += prices[i] * quantities[i];
+        }
+
+        var productRows = document.querySelectorAll(".productTable tbody tr");
+        var totalPrice = 0;
+        productRows.forEach(function(row, index) {
+            var price = parseFloat(row.cells[3].innerText.replace("$", ""));
+            var quantity = parseInt(row.cells[4].innerText);
+            var totalProductPrice = price * quantity;
+            totalPrice += totalProductPrice;
+            row.cells[5].innerText = "$" + totalProductPrice.toFixed(2);
+        });
+
+        
+
+        // Calculate GST and total amount including GST
+        var gstPercentage = 22; // GST percentage
+        var gst = (sum * gstPercentage) / 100;
+        var total = sum + gst;
+        var deliveryCharges = 109;
+        var gsh = 0; // GSH
+        var totalPrice= total+deliveryCharges;
+
+
+        // Update invoice table with calculated values
+        document.getElementById("sum").innerText = parseInt(sum); // Invoice Amount
+        document.getElementById("gst").innerText = parseInt(gstPercentage)+ "%"; // GST %
+        document.getElementById("total").innerText = parseInt(total);
+        document.getElementById("gsh").innerText=parseInt(gsh);
+        document.getElementById("dcharges").innerText=parseInt(deliveryCharges);
+        document.getElementById("tprice").innerText=parseInt(totalPrice);
+
+        var labelValues = {
+            "ddate": "19-02-2024",
+            "spl": "IBL5498",
+            "DN": "DN006758",
+            "trackingno": "CH5001",
+            "boy": "Samad Amir  "
+        };
+
+        // Loop through labelValues object and update corresponding label elements
+        for (var labelId in labelValues) {
+            if (labelValues.hasOwnProperty(labelId)) {
+                var labelElement = document.getElementById(labelId);
+                if (labelElement) {
+                    labelElement.innerText = labelValues[labelId];
+                }
+            }
+        }
+</script>
+
+
+
+</body>
+</html>

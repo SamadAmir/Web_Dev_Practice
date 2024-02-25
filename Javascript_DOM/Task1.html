@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>k213873 Q1</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+    <script>
+        function createElements() {
+            // Panel heading
+            var panelHeading = document.createElement('div');
+            panelHeading.className = 'panel-heading';
+            document.body.appendChild(panelHeading);
+
+            var generatePdfButton = document.createElement('button');
+            generatePdfButton.id = 'generatepfd';
+            generatePdfButton.className = 'btn btn-primary pull-right';
+            generatePdfButton.style.marginRight = '1.5%';
+            generatePdfButton.textContent = 'Generate PDF';
+            generatePdfButton.addEventListener('click', generatePdfClick);
+            panelHeading.appendChild(generatePdfButton);
+
+            var h1 = document.createElement('h1');
+            h1.className = 'text-primary';
+            h1.id = 'dailymeet';
+            h1.style.textAlign = 'center';
+            h1.textContent = 'IBL Logistics Order Form';
+            panelHeading.appendChild(h1);
+
+            // Panel body
+            var panelBody = document.createElement('div');
+            panelBody.className = 'panel-body';
+            document.body.appendChild(panelBody);
+
+            // Form elements
+            var formRow = document.createElement('div');
+            formRow.className = 'row';
+            panelBody.appendChild(formRow);
+
+            var formCols = ['Customer Code', 'Customer Name', 'City', 'Order ID', 'Order Date', 'Customer Contact Person', 'Customer Contact Info', 'Stock Receiver Name/Contact', 'Searle Customer Code', 'Delivery Mode', 'Payment Mode', 'Category', 'Bill Through', 'Salesman', 'Sample Order ID'];
+            var formInputs = ['customercode', 'customername', 'city', 'orderid', 'orderdate', 'contactperson', 'contactno', 'recivername', 'recivercontact', 'deliverymode', 'payment', 'Category',  'searlcode', 'username', 'Sample_id'];
+
+            for (var i = 0; i < formCols.length; i++) {
+                var colDiv = document.createElement('div');
+                colDiv.className = 'col-xs-3';
+
+                var label = document.createElement('label');
+                label.htmlFor = formInputs[i];
+                label.className = 'control-label center-block label label-primary';
+                label.style.border = '2px solid green';
+                label.textContent = formCols[i];
+                colDiv.appendChild(label);
+
+                var formGroup = document.createElement('div');
+                formGroup.className = 'form-group';
+
+                var input = document.createElement('label');
+                input.id = formInputs[i];
+                input.className = 'form-control';
+                formGroup.appendChild(input);
+
+                colDiv.appendChild(formGroup);
+
+                formRow.appendChild(colDiv);
+            }
+
+            // Delivery address
+            var deliveryAddressDiv = document.createElement('div');
+            deliveryAddressDiv.className = 'panel-body';
+            panelBody.appendChild(deliveryAddressDiv);
+
+            var inputGroup = document.createElement('div');
+            inputGroup.className = 'input-group';
+            deliveryAddressDiv.appendChild(inputGroup);
+
+            var deliveryAddressSpan = document.createElement('span');
+            deliveryAddressSpan.className = 'input-group-addon btn-primary';
+            deliveryAddressSpan.style.color = '#fff';
+            deliveryAddressSpan.textContent = 'Delivery Address';
+            inputGroup.appendChild(deliveryAddressSpan);
+
+            var deliveryAddressLabel = document.createElement('label');
+            deliveryAddressLabel.id = 'address';
+            deliveryAddressLabel.className = 'form-control';
+            deliveryAddressLabel.setAttribute('aria-describedby', 'inputGroupSuccess2Status');
+            inputGroup.appendChild(deliveryAddressLabel);
+              
+
+            //Product Table
+            var table = document.createElement('table');
+            table.className = 'table table-bordered';
+            table.style.float = 'left';
+            table.style.width = '100%';
+            table.style.fontSize = '90%';
+            panelBody.appendChild(table);
+
+            var thead = document.createElement('thead');
+            thead.style.background = '#337ab7';
+            thead.style.fontWeight = 'bold';
+            thead.style.color = 'white';
+            table.appendChild(thead);
+
+            var tableHeaders = ['No.', 'Product ID', 'Product Name', 'Price', 'Quantity', 'Total Price'];
+            var tbodyData = [
+                ['1', 'PID001', 'Product 1', '$10.00', '5', '$50.00'],
+                ['2', 'PID002', 'Product 2', '$15.00', '3', '$45.00'],
+                ['3', 'PID003', 'Product 3', '$20.00', '4', '$80.00'],
+                ['4', 'PID004', 'Product 4', '$25.00', '2', '$50.00'],
+                ['5', 'PID005', 'Product 5', '$30.00', '6', '$180.00']
+            ];
+
+            var headerRow = document.createElement('tr');
+            for (var h = 0; h < tableHeaders.length; h++) {
+                var th = document.createElement('th');
+                th.textContent = tableHeaders[h];
+                headerRow.appendChild(th);
+            }
+            thead.appendChild(headerRow);
+
+            var tbody = document.createElement('tbody');
+            table.appendChild(tbody);
+
+            for (var r = 0; r < tbodyData.length; r++) {
+                var row = document.createElement('tr');
+                for (var c = 0; c < tbodyData[r].length; c++) {
+                    var cell = document.createElement('td');
+                    cell.textContent = tbodyData[r][c];
+                    row.appendChild(cell);
+                }
+                tbody.appendChild(row);
+            }
+
+        // invoice table
+            var invoiceTableDiv = document.createElement('div');
+            invoiceTableDiv.className = 'panel-body';
+            document.body.appendChild(invoiceTableDiv);
+
+            var invoiceTable = document.createElement('table');
+            invoiceTable.className = 'table table-bordered striped';
+            invoiceTable.style.border = '1px solid black';
+            invoiceTable.style.width = '59.8%';
+            invoiceTableDiv.appendChild(invoiceTable);
+
+            var invoiceTbody = document.createElement('tbody');
+            invoiceTable.appendChild(invoiceTbody);
+
+            var invoiceData = [
+                ['Invoice Amount', '405'],
+                ['GST %', '22%'],
+                ['Incl. Sales Tax', '492'],
+                ['GSH', '0'],
+                ['Delivery Charges', '109'],
+                ['Discount/Gain', '0.0']
+            ];
+
+            invoiceData.forEach(function(rowData) {
+                var row = document.createElement('tr');
+
+                var cell1 = document.createElement('td');
+                cell1.textContent = rowData[0];
+                row.appendChild(cell1);
+
+                var cell2 = document.createElement('td');
+                var label = document.createElement('label');
+                label.id = rowData[0].replace(/ /g, '').toLowerCase(); // Generate ID from text
+                label.className = 'form-control';
+                label.textContent = rowData[1];
+                cell2.appendChild(label);
+
+                row.appendChild(cell2);
+
+                invoiceTbody.appendChild(row);
+            });
+
+        //  additional details table
+        
+            var additionalDetailsTableDiv = document.createElement('div');
+            additionalDetailsTableDiv.className = 'panel-body';
+            document.body.appendChild(additionalDetailsTableDiv);
+
+            var additionalDetailsTable = document.createElement('table');
+            additionalDetailsTable.className = 'table table-bordered';
+            additionalDetailsTable.style.width = '35%';
+            additionalDetailsTableDiv.appendChild(additionalDetailsTable);
+
+            var additionalDetailsTbody = document.createElement('tbody');
+            additionalDetailsTable.appendChild(additionalDetailsTbody);
+
+            var additionalDetailsData = [
+                ['Invoice Date', ''],
+                ['IBL Invoice #', ''],
+                ['Delivery Note', ''],
+                ['Tracking No', ''],
+                ['Delivered By', '']
+            ];
+
+            additionalDetailsData.forEach(function(rowData) {
+                var row = document.createElement('tr');
+
+                var cell1 = document.createElement('td');
+                cell1.className = 'bg-primary';
+                cell1.style.width = '25%';
+                cell1.textContent = rowData[0];
+                row.appendChild(cell1);
+
+                var cell2 = document.createElement('td');
+                var label = document.createElement('label');
+                label.id = rowData[0].replace(/ /g, '').toLowerCase(); // Generate ID from text
+                label.className = 'form-control';
+                cell2.appendChild(label);
+
+                row.appendChild(cell2);
+
+                additionalDetailsTbody.appendChild(row);
+            });
+
+        var submitButton = document.createElement('button');
+        submitButton.id = 'Submit';
+        submitButton.className = 'btn btn-primary pull-right';
+        submitButton.textContent = 'Submit';
+        submitButton.style.marginRight = '1.5%';
+        submitButton.onclick = buttonClick;
+        document.body.appendChild(submitButton);
+        }
+
+        // Function to handle generate PDF button click
+        function generatePdfClick() {
+            console.log('Generate PDF button clicked');
+        }
+
+        // Function to handle submit button click
+        function buttonClick() {
+            
+            console.log('Submit button clicked');
+        }
+
+        // Call createElements function when the page loads
+        window.onload = createElements;
+    </script>
+</body>
+</html>

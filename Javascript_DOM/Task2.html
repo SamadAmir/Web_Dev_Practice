@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>k213873 Q2</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="panel-heading" id="panelHeading">
+        <button id="generatepfd" class="btn btn-primary pull-right">Generate PDF</button>
+        <h1 class="text-primary" id="dailymeet">IBL Logistics Order Form</h1>
+    </div>
+    <div class="panel-body" id="panelBody">
+    </div>
+<div class="panel-body" id="panelBody1">
+        <div class="col-sm-12" id="colSm12">
+            <div class="input-group" id="inputGroup">
+                <span class="input-group-addon btn-primary" id="deliveryAddressAddon"></span>
+                <label id="address" class="form-control" aria-describedby="inputGroupSuccess2Status"></label>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel-body" id="panelBody2">
+        <table  class="table table-bordered" id="productTable" style="float:left;width:100%;font-size:90%;">
+        <thead id="tableHead" style="background:#337ab7 ;Font-Bold:true; ForeColor:White" >
+            <tr>
+                <th>No.</th>
+                <th>Product ID</th>
+                <th>Product Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total Price</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            <tr>
+                <td>1</td>
+                <td>PID001</td>
+                <td>Product 1</td>
+                <td>$10.00</td>
+                <td>5</td>
+                <td>$50.00</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>PID002</td>
+                <td>Product 2</td>
+                <td>$15.00</td>
+                <td>3</td>
+                <td>$45.00</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>PID003</td>
+                <td>Product 3</td>
+                <td>$20.00</td>
+                <td>4</td>
+                <td>$80.00</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>PID004</td>
+                <td>Product 4</td>
+                <td>$25.00</td>
+                <td>2</td>
+                <td>$50.00</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>PID005</td>
+                <td>Product 5</td>
+                <td>$30.00</td>
+                <td>6</td>
+                <td>$180.00</td>
+            </tr>
+        </tbody>
+    </table>
+
+      </div >
+            <div class="panel-body" id=panelBody3>
+                <table class="table table-bordered striped" id="invoiceTable" border="1" style="width: 59.8%; ">
+            <tr>
+
+                            <td id="test1"> Invoice Amount </td>
+                            <td> <label  ID="sum"   class="form-control">405</label>  </td>
+                    
+                        </tr>
+                        <tr>
+
+                            <td> GST % </td>
+                            <td> <label  ID="gst"  class="form-control">22%</label></td>
+                           
+                        </tr>
+                          <tr>
+
+                            <td> Incl. Sales Tax</td>
+                            <td> <label  ID="total"  class="form-control">492</label> </td>
+                           
+                        </tr>
+             
+
+                    <tr>
+                        <td > GSH</td>
+                            <td> <label  ID="gsh"  class="form-control">0</label></td>
+     
+
+                   </tr>
+                     <tr>
+                        <td > Delivery Charges</td>
+                            <td> <label  ID="dcharges"  class="form-control">109</label></td>
+
+                   </tr>
+                   <tr>
+
+                   <tr>
+                        <td > Discount/Gain</td>
+                            <td> <label  ID="per_margin"  class="form-control">0.0</label></td>
+
+                   </tr>
+                    </table>
+
+            </div>
+
+    <div class="panel-body" id=panelBody4>
+    
+                     <table class="table table-bordered" id="invoiceDetails" style="width: 35%;">
+                         
+                           <tr> 
+                              <td class="bg-primary" id="bdate" style="width: 25%;"> Invoice Date  </td>
+                            <td>   <label ID="ddate"    class="form-control"   ></label> </td>
+                        </tr>
+
+                         
+                          
+                       <tr> 
+
+                            <td class="bg-primary"  ID="bspl" style="width: 50%;"> IBL Invoice #</td>
+                            <td> <label  ID="spl"  class="form-control"></label> </td>
+                           
+                        </tr>
+                            <tr> 
+
+                            <td class="bg-primary" ID="bDN" style="width: 50%;"> Delivery Note </td>
+                     <td> <label  ID="DN"  class="form-control"></label> </td>
+                           
+                        </tr>
+                        <tr> 
+
+                            <td class="bg-primary" ID="btrackingno" style="width: 25%;"> Tracking No  </td>
+                            <td> <label  ID="trackingno"  class="form-control"></label> </td>
+                           </tr>  
+                         <tr> 
+                              <td class="bg-primary" ID="bdb" style="width: 25%;"> Delivered By  </td>
+                            <td>   <label ID="db"    class="form-control"   ></label> </td>
+                        </tr>
+                        
+                       
+                    </table>
+
+
+</div>
+
+<div class="panel-body" id="panelBody5">
+    <Button ID="submit"  Visible="false" Text="Submit" value="Submit" class=" btn btn-primary pull-right" OnClick="Button1_Click">Submit</Button>
+</div>
+          
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Remove inline styles
+            var elementsToRemoveStyles = document.querySelectorAll('[style]');
+            elementsToRemoveStyles.forEach(function(element) {
+                element.removeAttribute('style');
+            });
+
+            // Remove inline classes
+            var elementsToRemoveClasses = document.querySelectorAll('[class]');
+            elementsToRemoveClasses.forEach(function(element) {
+                element.removeAttribute('class');
+            });
+
+            // Apply styles and classes using DOM methods
+            var panelHeading = document.getElementById('panelHeading');
+            panelHeading.className = 'panel-heading';
+
+            var generatePdfButton = document.getElementById('generatepfd');
+            generatePdfButton.className = 'btn btn-primary pull-right';
+            generatePdfButton.innerText = 'Generate PDF';
+
+            var dailymeet = document.getElementById('dailymeet');
+            dailymeet.className = 'text-primary';
+            dailymeet.innerText = 'IBL Logistics Order Form';
+
+            var formCols = ['Customer Code', 'Customer Name', 'City', 'Order ID', 'Order Date', 'Customer Contact Person', 'Customer Contact Info', 'Stock Receiver Name/Contact', 'Searle Customer Code', 'Delivery Mode', 'Payment Mode', 'Category',  'Bill Through', 'Salesman', 'Sample Order ID'];
+            var formInputs = ['customercode', 'customername', 'city', 'orderid', 'orderdate', 'contactperson', 'contactno', 'recivername', 'recivercontact', 'deliverymode', 'payment', 'Category',  'searlcode', 'username', 'Sample_id'];
+
+            var panelBody = document.getElementById('panelBody');
+            var formElementsDiv = document.createElement('div');
+            formElementsDiv.className = 'panel-body';
+            panelBody.appendChild(formElementsDiv);
+
+            for (var i = 0; i < formCols.length; i++) {
+                var colDiv = document.createElement('div');
+                colDiv.className = 'col-xs-3';
+                formElementsDiv.appendChild(colDiv);
+
+                var label = document.createElement('label');
+                label.setAttribute('for', formInputs[i]);
+                label.className = 'control-label center-block label label-primary';
+                label.style.border = '2px solid green';
+                label.innerText = formCols[i];
+                colDiv.appendChild(label);
+
+                var formGroupDiv = document.createElement('div');
+                formGroupDiv.className = 'form-group';
+                colDiv.appendChild(formGroupDiv);
+
+                var input = document.createElement('input');
+                input.id = formInputs[i];
+                input.className = 'form-control';
+                formGroupDiv.appendChild(input);
+            }
+            var panelBody1 = document.getElementById('panelBody1');
+            panelBody1.className = 'panel-body';
+
+            var colSm12 = document.getElementById('colSm12');
+            colSm12.className = 'col-sm-12';
+
+            var inputGroup = document.getElementById('inputGroup');
+            inputGroup.className = 'input-group';
+
+            var deliveryAddressAddon = document.getElementById('deliveryAddressAddon');
+            deliveryAddressAddon.className = 'input-group-addon btn-primary';
+            deliveryAddressAddon.style.color = '#fff';
+            deliveryAddressAddon.innerText = 'Delivery Address';
+
+            var address = document.getElementById('address');
+            address.className = 'form-control';
+
+            var panelBody2 = document.getElementById('panelBody2');
+            panelBody2.className = 'panel-body';
+
+            var productTable = document.getElementById('productTable'); 
+            productTable.className='table table-bordered'
+            productTable.style.float = 'left';
+            productTable.style.width = '100%';
+            productTable.style.fontSize = '90%';
+
+            var tableHead = document.getElementById('tableHead');
+            tableHead.style.background = '#337ab7';
+            tableHead.style.fontWeight = 'bold';
+            tableHead.style.color = 'white';
+
+            var tableBody = document.getElementById('tableBody');
+            
+            var panelBody3 = document.getElementById('panelBody3');
+            panelBody3.className = 'panel-body';
+
+            var invoiceTable = document.getElementById('invoiceTable'); 
+            invoiceTable.className='table table-bordered striped'
+            invoiceTable.border=1;
+            invoiceTable.style.width = '59.8%';
+
+
+            var sumLabel = document.getElementById('sum');
+           sumLabel.className = 'form-control';
+
+           var gstLabel = document.getElementById('gst');
+           gstLabel.className = 'form-control';
+
+           var totalLabel = document.getElementById('total');
+           totalLabel.className = 'form-control';
+
+           var gshLabel = document.getElementById('gsh');
+           gshLabel.className = 'form-control';
+
+           var dchargesLabel = document.getElementById('dcharges');
+           dchargesLabel.className = 'form-control';
+
+          var perMarginLabel = document.getElementById('per_margin');
+          perMarginLabel.className = 'form-control';
+          
+          var panelBody4 = document.getElementById('panelBody4');
+          panelBody4.className = 'panel-body';
+
+          var invoiceDetails = document.getElementById('invoiceDetails'); 
+          invoiceDetails.className='table table-bordered '
+          invoiceDetails.style.width = '35%';
+
+           var invoiceDate = document.getElementById('bdate');
+           invoiceDate.className = 'bg-primary';
+            invoiceDate.style.width = '50%';
+            
+            var dateLabel = document.getElementById('ddate');
+             dateLabel.className = 'form-control';
+             
+             var ibl = document.getElementById('bspl');
+           ibl.className = 'bg-primary';
+            ibl.style.width = '50%';
+
+            var iblLabel = document.getElementById('spl');
+             iblLabel.className = 'form-control';
+
+             var note = document.getElementById('bDN');
+           note.className = 'bg-primary';
+            note.style.width = '50%';
+  
+           var noteLabel = document.getElementById('DN');
+             noteLabel.className = 'form-control';
+
+           var trackingNO = document.getElementById('btrackingno');
+           trackingNO.className = 'bg-primary';
+            trackingNO.style.width = '25%';
+
+           var trackingLabel = document.getElementById('trackingno');
+             trackingLabel.className = 'form-control';
+
+            var deliver = document.getElementById('bdb');
+            deliver.className = 'bg-primary';
+            deliver.style.width = '25%';
+
+            var deliverLabel = document.getElementById('db');
+             deliverLabel.className = 'form-control';
+
+             var panelBody5= document.getElementById('panelBody5');
+            panelBody5.className = 'panel-body';
+
+            var submitButton = document.getElementById('submit');
+            submitButton.innerText = 'Submit';
+            submitButton.style.display = 'block';
+            submitButton.className = 'btn btn-primary pull-right';
+
+        });
+    </script>
+</body>
+</html>
