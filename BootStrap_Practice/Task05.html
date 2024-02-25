@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.SamadAmir.com</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding-top: 50px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h3 {
+            margin-top: 50px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        /* Container Styles */
+        .container-desc {
+            margin-bottom: 30px;
+        }
+        .grid-item {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+        .flex-item {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Layout Concepts</h2>
+        <div class="container-desc">
+            <h3>Container</h3>
+            <p>The container class is used to center content and set a maximum width.</p>
+            <div class="container bg-light p-3 rounded text-dark">
+                <p>This content is inside a container.</p>
+            </div>
+        </div>
+
+        <div class="container-desc">
+            <h3>Grid</h3>
+            <p>The grid class is used to create flexible grid layouts.</p>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="grid-item bg-primary text-white">
+                        <h4>Grid Item 1</h4>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="grid-item bg-secondary text-white">
+                        <h4>Grid Item 2</h4>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="grid-item bg-success text-white">
+                        <h4>Grid Item 3</h4>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="grid-item bg-danger text-white">
+                        <h4>Grid Item 4</h4>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="grid-item bg-warning text-dark">
+                        <h4>Grid Item 5</h4>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="grid-item bg-info text-white">
+                        <h4>Grid Item 6</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-desc">
+            <h3>Flex</h3>
+            <p>The flex class is used to create flexible layouts using flexbox.</p>
+            <div class="d-flex flex-wrap justify-content-between">
+                <div class="flex-item bg-primary text-white">
+                    <h4>Flex Item 1</h4>
+                </div>
+                <div class="flex-item bg-secondary text-white">
+                    <h4>Flex Item 2</h4>
+                </div>
+                <div class="flex-item bg-success text-white">
+                    <h4>Flex Item 3</h4>
+                </div>
+                <div class="flex-item bg-danger text-white">
+                    <h4>Flex Item 4</h4>
+                </div>
+                <div class="flex-item bg-warning text-dark">
+                    <h4>Flex Item 5</h4>
+                </div>
+                <div class="flex-item bg-info text-white">
+                    <h4>Flex Item 6</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
