@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>www.SamadAmir.com</title>
+    <link href="input.css" rel="stylesheet">
+    <style>
+        .zoom-container {
+            overflow: hidden;
+            position: relative;
+        }
+        .zoom-image {
+            transition: transform 0.2s;
+        }
+        .zoom-image:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto p-8">
+        <h2 class="text-2xl font-bold mb-4">Responsive Image Gallery</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="bg-gray-200 h-48 sm:h-64 md:h-80 rounded-lg overflow-hidden">
+                <img src="https://source.unsplash.com/random/400x400?sig=1" alt="Image 1" class="w-full h-full object-cover">
+            </div>
+            <div class="bg-gray-200 h-48 sm:h-64 md:h-80 rounded-lg overflow-hidden">
+                <img src="https://source.unsplash.com/random/400x400?sig=2" alt="Image 2" class="w-full h-full object-cover">
+            </div>
+            <div class="bg-gray-200 h-48 sm:h-64 md:h-80 rounded-lg overflow-hidden">
+                <img src="https://source.unsplash.com/random/400x400?sig=3" alt="Image 3" class="w-full h-full object-cover">
+            </div>
+        </div>
+
+        <hr class="my-8">
+
+        <h2 class="text-2xl font-bold mb-4">Product Image with Zoom on Hover</h2>
+        <div class="zoom-container">
+            <img src="https://source.unsplash.com/random/400x400?sig=4" alt="Product Image" class="zoom-image transition duration-200 hover:scale-110">
+        </div>
+    </div>
+</body>
+</html>
