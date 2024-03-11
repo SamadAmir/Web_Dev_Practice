@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        .slider-container {
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+        .slider-images {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .slider-image {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider-container">
+        <div class="slider-images">
+            <img class="slider-image" src="https://source.unsplash.com/random/600x400?sig=1" alt="Random Image 1">
+            <img class="slider-image" src="https://source.unsplash.com/random/600x400?sig=2" alt="Random Image 2">
+            <img class="slider-image" src="https://source.unsplash.com/random/600x400?sig=3" alt="Random Image 3">
+
+         </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sliderImages = document.querySelector('.slider-images');
+            const sliderImageWidth = document.querySelector('.slider-image').clientWidth;
+            let imageIndex = 0;
+            function moveSlider() {
+                imageIndex++;
+                if (imageIndex === sliderImages.children.length) {
+                    imageIndex = 0;
+                }
+                sliderImages.style.transform = `translateX(-${sliderImageWidth * imageIndex}px)`;
+            }
+
+            setInterval(moveSlider, 4000);// for delay ;in ms so 1000ms means 1s
+        });
+    </script>
+</body>
+</html>

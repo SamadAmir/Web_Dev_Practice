@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="form">
+        <label for="guessField">
+            Enter a name: 
+        </label>
+         
+        <input type="text" id="guessField" class="guessField">
+         
+        <input type="submit" value="Check Palindrome" class="guessSubmit" id="submitguess">
+    </div>
+
+    <script>
+        document.getElementById("submitguess").onclick = function() {
+            const inputString = document.getElementById("guessField").value;
+            const len = inputString.length;
+            let isPalindrome = true;
+
+            for (let i = 0; i < len / 2; i++) {
+                if (inputString[i] !== inputString[len - 1 - i]) {
+                    isPalindrome = false;
+                    break;
+                }
+            }
+            if (isPalindrome) {
+                console.log('It is a palindrome');
+            } else {
+                console.log('It is not a palindrome');
+            }
+        }
+    </script>
+</body>
+</html>
