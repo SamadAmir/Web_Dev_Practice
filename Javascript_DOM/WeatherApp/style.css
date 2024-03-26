@@ -1,0 +1,47 @@
+body{
+    background-color: lightgray;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.weatherForm{
+   padding: 20px;
+}
+.cityInput{
+    margin:2px;
+    padding: 5px;
+    border-radius: 4px;
+    font-weight: bold;
+    width: 300px;
+}
+.button{
+    padding: 5px;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+.button:hover{
+    background-color: rgba(0, 0, 0, 0.533);
+    color: rgba(255, 255, 255, 0.566);
+}
+.card{
+    background:linear-gradient(180deg,hsl(210, 100%, 66%),orange);
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1{
+    font-size: 3rem;
+}
+p{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.error {
+    font-weight: bold;
+    font-size: 1.5rem;
+}

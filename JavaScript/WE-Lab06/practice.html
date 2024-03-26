@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>To-Do List</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  #taskInput {
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  #addButton {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  li {
+    padding: 10px;
+    background-color: #f2f2f2;
+    margin-bottom: 5px;
+  }
+  .deleteButton {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    float: right;
+  }
+</style>
+</head>
+<body>
+
+<h2>To-Do List</h2>
+
+<input type="text" id="taskInput" placeholder="Enter task...">
+<button id="addButton">Add Task</button>
+
+<ul id="taskList"></ul>
+
+<script>
+  const taskInput = document.getElementById('taskInput');
+  const addButton = document.getElementById('addButton');
+  const taskList = document.getElementById('taskList');
+
+  addButton.addEventListener('click', () => {
+    const taskText = taskInput.value.trim();
+    if (taskText !== '') {
+      const li = document.createElement('li');
+      li.textContent = taskText;
+      
+      const deleteButton = document.createElement('button');
+      deleteButton.textContent = '❌';
+      deleteButton.className = 'deleteButton';
+      deleteButton.addEventListener('click', () => {
+        li.remove();
+      });
+      
+      li.appendChild(deleteButton);
+      taskList.appendChild(li);
+      
+      taskInput.value = '';
+    } else {
+      alert('Please enter a task.');
+    }
+  });
+</script>
+
+</body>
+</html>
