@@ -1,27 +1,12 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import {createBrowserRouter, createRoutesFromElements, Route, RouterProvider} from "react-router-dom";
+import AddTodo from "./components/AddTodo"
+import Todos from "./components/Todos"
 import './App.css'
-// import Product from './Components/Product'
-import Dashboard from "./Components/Dashboard";
-import Cart from "./Components/Cart";
-import RootLayout from "./Components/RootLayout";
-
 function App() {
-
-  const router =  createBrowserRouter(createRoutesFromElements(
-    <Route path="/" element={<RootLayout/>}>
-      <Route index element={<Dashboard/>}></Route>
-      <Route path="/cart" index element={<Cart/>}></Route>
-    </Route>
-  ))
-
   return (
     <>
-     <div className="App">
-      <RouterProvider router={router}></RouterProvider>
-     </div>
-     
-     
+      <h1>Learning about Redux</h1>
+      <AddTodo/>
+      <Todos></Todos>
     </>
   )
 }
