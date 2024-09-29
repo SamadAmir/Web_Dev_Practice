@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState } from "react"
+import Logo from "../../assets/Logo.png"
 import "./Navbar.css";
 
 const slides = [
@@ -44,6 +45,7 @@ const Navbar = () => {
             <div className="Menu-container">
                 <div className="content-menu">
                     <ul className="menu">
+                        <img src={Logo} alt="Logo"></img>
                         <li>Home</li>
                         <li>Features</li>
                         <li>Pricing</li>
