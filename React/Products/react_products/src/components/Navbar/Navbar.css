@@ -40,9 +40,10 @@
     transition: all 0.9s ease;
 }
 .menu img {
-    height: 40px;
+    height: 60px;
+    width: 10%;
     position: absolute;
-    left: 10%;
+    left: 1%;
 }
 
 /* Slideshow styles */
