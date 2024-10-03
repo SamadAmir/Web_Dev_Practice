@@ -1,0 +1,44 @@
+.content {
+    background-image: url("../../assets/Contentbg.png");
+    background-size: cover; /* Ensure background image covers entire area */
+    background-position: center; /* Center the background image */
+    height: 100vh;
+    width: 100%;
+    display: flex; /* Use flexbox to center content */
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    flex-direction: column; /* Ensure text stays in column layout */
+    text-align: center; /* Center-align the text */
+    padding: 0 20px; /* Some padding to prevent text from touching the edges */
+    color: white; /* White text for better contrast */
+    position: relative; /* For potential additional effects */
+}
+
+.content h1 {
+    font-size: 3rem; /* Larger font size for main heading */
+    color: white; /* Ensure text color contrasts well with the background */
+    font-weight: bold; /* Make heading bold for emphasis */
+    margin-bottom: 20px; /* Space between heading and paragraph */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* Add subtle shadow to make the text pop */
+}
+
+.content p {
+    font-size: 1.2rem; /* Readable size for paragraph text */
+    color: #f0f0f0; /* Light grey text for better contrast */
+    max-width: 700px; /* Limit the width for better readability */
+    line-height: 1.7; /* Increase line height for improved spacing */
+    margin: 0 auto; /* Center-align the paragraph */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Subtle shadow for text */
+    padding: 10px 20px; /* Add padding for better spacing */
+}
+
+.content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* A dark overlay to improve text readability */
+    z-index: -1; /* Place behind the content */
+}
