@@ -1,44 +1,56 @@
-.content {
-    background-image: url("../../assets/Contentbg.png");
-    background-size: cover; /* Ensure background image covers entire area */
-    background-position: center; /* Center the background image */
+/* Content container with the specified background image */
+.content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
     width: 100%;
-    display: flex; /* Use flexbox to center content */
-    justify-content: center; /* Horizontally center */
-    align-items: center; /* Vertically center */
-    flex-direction: column; /* Ensure text stays in column layout */
-    text-align: center; /* Center-align the text */
-    padding: 0 20px; /* Some padding to prevent text from touching the edges */
-    color: white; /* White text for better contrast */
-    position: relative; /* For potential additional effects */
+    text-align: center;
+    background-image: url("../../assets/Contentbg.png"); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Subtle shadow effect */
 }
 
-.content h1 {
-    font-size: 3rem; /* Larger font size for main heading */
-    color: white; /* Ensure text color contrasts well with the background */
-    font-weight: bold; /* Make heading bold for emphasis */
-    margin-bottom: 20px; /* Space between heading and paragraph */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* Add subtle shadow to make the text pop */
+/* Heading (H1) in the content section - matching the slide <h1> */
+.content-container h1 {
+    font-size: 48px; /* Matching the slide's h1 size */
+    color: #333; /* Dark gray color like the slide */
+    font-weight: bold; /* Bold text */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* Same shadow effect as the slide */
 }
 
-.content p {
-    font-size: 1.2rem; /* Readable size for paragraph text */
-    color: #f0f0f0; /* Light grey text for better contrast */
-    max-width: 700px; /* Limit the width for better readability */
-    line-height: 1.7; /* Increase line height for improved spacing */
-    margin: 0 auto; /* Center-align the paragraph */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Subtle shadow for text */
-    padding: 10px 20px; /* Add padding for better spacing */
+/* Subheading (H3) in the content section - matching the slide <h3> */
+.content-container h3 {
+    font-size: 24px; /* Matching the slide's h3 size */
+    color: #555; /* Lighter gray color like the slide's h3 */
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Same shadow effect as the slide */
 }
 
-.content::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* A dark overlay to improve text readability */
-    z-index: -1; /* Place behind the content */
+/* Paragraph text */
+.content-container p {
+    font-size: 18px; /* Standard paragraph text size */
+    color: #535353; /* Consistent paragraph color */
+    max-width: 600px; /* Limit the width for better readability */
+    line-height: 1.7;
+    margin: 0 auto;
+    padding: 10px 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Optional: Adjust for responsiveness */
+@media (max-width: 768px) {
+    .content-container h1 {
+        font-size: 36px; /* Reduce size for mobile */
+    }
+    .content-container h3 {
+        font-size: 20px; /* Reduce h3 size for mobile */
+    }
+    .content-container p {
+        font-size: 16px; /* Adjust paragraph size for mobile */
+    }
 }
