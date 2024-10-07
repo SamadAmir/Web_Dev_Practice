@@ -16,6 +16,7 @@
 
 .content-menu {
     margin-bottom: 40px;
+    
 }
 
 .menu {
@@ -118,10 +119,11 @@
 .paginator {
     position: absolute;
     bottom: 10px;
-    left: 50%;
+    left: 45%;
     transform: translateX(-50%);
     display: flex;
     gap: 10px;
+
 }
 
 .dot {

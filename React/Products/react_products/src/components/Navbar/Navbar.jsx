@@ -1,6 +1,8 @@
-import { useState } from "react"
-import Logo from "../../assets/Logo.png"
+import { useState } from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
+import Logo from "../../assets/Logo.png";
 import "./Navbar.css";
+import { Link as ScrollLink } from "react-scroll";
 
 const slides = [
     {
@@ -27,6 +29,7 @@ const slides = [
 
 const Navbar = () => {
     const [activeSlide, setActiveSlide] = useState(0);
+    const navigate = useNavigate(); // Initialize useNavigate
 
     const nextSlide = () => {
         setActiveSlide((prev) => (prev + 1) % slides.length);
@@ -40,17 +43,41 @@ const Navbar = () => {
         setActiveSlide(index);
     };
 
+    const handleCreateAccountClick = () => {
+        navigate("/Form"); // Navigate to the /Form route when the button is clicked
+    };
+
     return (
         <>
             <div className="Menu-container">
                 <div className="content-menu">
                     <ul className="menu">
-                        <img src={Logo} alt="Logo"></img>
-                        <li>Home</li>
-                        <li>Features</li>
-                        <li>Pricing</li>
-                        <li>Blog</li>
-                        <li>Contact</li>
+                        <img src={Logo} alt="Logo" />
+                        <li>
+                            <ScrollLink to="home" smooth={true} duration={100}>
+                                Home
+                            </ScrollLink>
+                        </li>
+                        <li>
+                            <ScrollLink to="blog" smooth={true} duration={100}>
+                                Blog
+                            </ScrollLink>
+                        </li>
+                        <li>
+                            <ScrollLink to="features" smooth={true} duration={100}>
+                                Features
+                            </ScrollLink>
+                        </li>
+                        <li>
+                            <ScrollLink to="pricing" smooth={true} duration={100}>
+                                Pricing
+                            </ScrollLink>
+                        </li>
+                        <li>
+                            <ScrollLink to="contact" smooth={true} duration={100}>
+                                Contact
+                            </ScrollLink>
+                        </li>
                     </ul>
                 </div>
 
@@ -83,7 +110,9 @@ const Navbar = () => {
                         ))}
                     </div>
                 </div>
-                <button className="button-40" role="button">Create Account</button>
+                <button className="button-40" role="button" onClick={handleCreateAccountClick}>
+                    Create Account
+                </button>
             </div>
         </>
     );

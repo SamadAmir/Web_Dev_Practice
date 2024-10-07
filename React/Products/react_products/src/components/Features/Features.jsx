@@ -3,6 +3,7 @@ import "./Features.css";
 import { useState } from "react";
 import Mockup from '../../assets/Mockup.png';
 
+
 const slides = [
   {
     title: "We Create Something New",
