@@ -1,14 +1,106 @@
-.features-container{
+
+.features-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: left; 
+    width: 100%;
+    height: 100vh;
+    background-image: url("../../assets/Rectangle.png");
+    background-size: cover;
+    background-position: center;
+    background-color: #f9f9f9;
+    color: #333;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+/* Image section */
+.features-container .image {
+    flex: 1;
+    display: flex;
+}
+
+.features-container .image img {
+    width: 70%;
+    max-width: 500px; 
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px; 
+}
+
+/* Text section */
+.features-container .text {
+    flex: 1; 
     display: flex;
     flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-    font-family: Arial, Helvetica, sans-serif;
-    position: relative;
-    background-image: url("../../assets/Rectangle.png");
-    height: 100vh;
-    width: 100%;
-    background-position: center;
+    justify-content: center; 
+    margin-right: 20%;
+}
+
+.features-container .text p {
+    font-size: 36px; 
+    font-weight: bold;
+    margin-bottom: 20px;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    color: #333;
+}
+
+.features-container .text h2 {
+    font-size: 24px;
+    color: #555;
+    line-height: 1.5;
+    margin: 0;
+}
+.paginator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    background-color: #bbb;
+    border-radius: 50%;
+    transition: background-color 0.6s ease;
+}
+
+.dot.active {
+    background-color: #333; /* Active dot color */
+}
+
+.dot:hover {
+    background-color: #555; /* Slightly darker on hover */
+}
+
+/* Animations for the features text and container */
+.content {
+    opacity: 0;
+    transform: translateY(50px); /* Start slightly off-screen */
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .features-container {
+        text-align: center; 
+        gap: 20px; 
+    }
+
+    .features-container .image img {
+        max-width: 0%; 
+    }
+
+    .features-container .text p {
+        font-size: 28px; 
+    }
+
+    .features-container .text h2 {
+        font-size: 18px; 
+    }
 }
