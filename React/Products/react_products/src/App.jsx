@@ -6,6 +6,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import "./App.css";
 import Testimonial from "./components/Testimonial/Testimonial";
 import Showcase from "./components/Showcase/Showcase";
+import Pricing from "./components/PricingTable/Pricing";
 
 function App() {
     const location = useLocation();
@@ -27,6 +28,9 @@ function App() {
                     </div>
                     <Testimonial/>
                     <Showcase/>
+                    <div id ="pricing">
+                        <Pricing/>
+                    </div>
                 </>
             )}
 

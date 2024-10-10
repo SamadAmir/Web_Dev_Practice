@@ -1,0 +1,75 @@
+.Pricing-Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-image: url("../../assets/Pricebg.png");
+    background-size: cover;
+    background-position: center;
+
+  }
+  
+  .Prices {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .Plan {
+    flex: 1;
+    margin: 0 5px;
+    padding: 20px;
+    max-width: 25%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .Plan h2 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .Plan h3 {
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  ul {
+    flex-grow: 1;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    padding: 5px 0;
+    color: #555;
+  }
+  
+  .checkmark {
+    color: green;
+    margin-right: 5px;
+  }
+  
+  button {
+    padding: 10px 1px; 
+    border: none;
+    border-radius: 15px; 
+    cursor: pointer;
+    margin-left: 10%;
+    margin-top: 10px;
+    background-color: #111827;
+    color: white;
+    transition: background-color 0.3s; 
+    max-width: 50%;
+
+  }
+  
+  button:hover {
+    background-color: #ff69b4; 
+  }
+  

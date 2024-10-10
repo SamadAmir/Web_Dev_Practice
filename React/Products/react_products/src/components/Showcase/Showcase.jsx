@@ -1,28 +1,38 @@
 import { motion } from 'framer-motion';
 import './Showcase.css';
+import Food_Order from "../../assets/Food_Ordering.jpg";
+import Movie from "../../assets/Movie_project.png"
+import ConvexHull from "../../assets/Convex_hull.png"
+import Expense_Splitter from "../../assets/Expense_Splitter.png"
+
 
 const work = [
   {
     title: 'Food Ordering',
     description: 'MERN based food delivery app',
-    image: 'https://via.placeholder.com/300', // Replace with actual project screenshot
+    image: Food_Order,
+    link: 'https://github.com/SamadAmir/Food_Ordering',
   },
   {
     title: 'Movie Booking',
     description: 'React based movie booking application',
-    image: 'https://via.placeholder.com/300',
+    image: Movie,
+    link: 'https://github.com/SamadAmir/react_movie_app',
   },
   {
     title: 'Convex Hull Visualizer',
     description: 'JAVA based convex hull algorithms visualizer',
-    image: 'https://via.placeholder.com/300',
+    image: ConvexHull,
+    link: 'https://github.com/SamadAmir/ConvexHull_Visualization',
   },
   {
     title: 'Expense Splitter',
     description: 'JAVA based Expense splitter application',
-    image: 'https://via.placeholder.com/300',
+    image: Expense_Splitter,
+    link: 'https://github.com/SamadAmir/Expense_Splitter',
   },
 ];
+;
 
 const Showcase = () => {
   return (
@@ -50,6 +60,14 @@ const Showcase = () => {
             <div className="project-details">
               <h2>{project.title}</h2>
               <p>{project.description}</p>
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="project-link"
+              >
+                <i className="fa fa-github" aria-hidden="true"></i> View on GitHub
+              </a>
             </div>
           </motion.div>
         ))}
