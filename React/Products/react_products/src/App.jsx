@@ -7,6 +7,8 @@ import "./App.css";
 import Testimonial from "./components/Testimonial/Testimonial";
 import Showcase from "./components/Showcase/Showcase";
 import Pricing from "./components/PricingTable/Pricing";
+import Contact from "./components/Contact/Contact";
+import Footer from "./components/Footer/Footer";
 
 function App() {
     const location = useLocation();
@@ -31,6 +33,10 @@ function App() {
                     <div id ="pricing">
                         <Pricing/>
                     </div>
+                    <div id="contact">
+                        <Contact/>
+                    </div>
+                    <Footer/>
                 </>
             )}
 
