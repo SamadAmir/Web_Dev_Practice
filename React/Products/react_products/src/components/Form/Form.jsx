@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import "./Form.css";
+import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -10,6 +11,8 @@ const Form = () => {
     password: ""
   });
 
+  const navigate = useNavigate()
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -18,8 +21,13 @@ const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     toast.success("Account created successfully!");
-    // Add logic for form submission (e.g., API call)
+    setTimeout(()=>{
+      navigate("home");
+    },2000)
+   
   };
+
+
 
   return (
     <motion.div

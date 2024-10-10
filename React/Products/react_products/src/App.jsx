@@ -4,6 +4,8 @@ import Navbar from "./components/Navbar/Navbar";
 import Form from "./components/Form/Form";
 import { Routes, Route, useLocation } from "react-router-dom";
 import "./App.css";
+import Testimonial from "./components/Testimonial/Testimonial";
+import Showcase from "./components/Showcase/Showcase";
 
 function App() {
     const location = useLocation();
@@ -23,6 +25,8 @@ function App() {
                     <div id="features">
                         <Features />
                     </div>
+                    <Testimonial/>
+                    <Showcase/>
                 </>
             )}
 
